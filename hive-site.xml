@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>javax.jdo.option.ConnectionURL</name>
+  <value>jdbc:mysql://localhost/metastore?createDatabaseIfNotExist=true</value>
+</property>
+
+<property>
+  <name>javax.jdo.option.ConnectionDriverName</name>
+  <value>com.mysql.jdbc.Driver</value>
+</property>
+
+<property>
+  <name>javax.jdo.option.ConnectionUserName</name>
+  <value>hive</value>
+</property>
+
+<property>
+  <name>javax.jdo.option.ConnectionPassword</name>
+  <value>hive</value>
+</property>
+
+<property>
+  <name>datanucleus.autoCreateSchema</name>
+  <value>false</value>
+</property>
+
+<property>
+  <name>datanucleus.fixedDatastore</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>datanucleus.autoStartMechanism</name> 
+  <value>SchemaTable</value>
+</property> 
+
+<property>
+  <name>hive.metastore.uris</name>
+  <value>thrift://namenode1:9083</value>
+</property>
+
+<property>
+<name>hive.metastore.schema.verification</name>
+<value>true</value>
+</property>
+
+<property>
+<name>hive.exec.compress.intermediate</name>
+<value>true</value>
+</property>
+
+<property>
+  <name>hive.exec.compress.output</name>
+  <value>true</value>
+  <description>
+    This controls whether the final outputs of a query (to a local/HDFS file or a Hive table) is compressed. 
+    The compression codec and other options are determined from Hadoop config variables mapred.output.compress*
+  </description>
+</property>
+
+</configuration>
+
